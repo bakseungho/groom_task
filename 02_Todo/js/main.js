@@ -87,7 +87,6 @@ function createTodoElement(item) {
         lists = lists.filter(t => t.id !== item.id);
 
         itemEl.remove();
-        showTodos();
         saveToLocalStorage();
     });
 
