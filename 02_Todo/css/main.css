@@ -1,0 +1,30 @@
+* {margin: 0;padding: 0;}
+a {text-decoration: none;}
+
+html, body {background: #f1f1f1;}
+
+header {display: flex;justify-content: space-between;align-items: center;width: calc(100% - 80px);padding: 40px;}
+header h1 {font-size: 32px;line-height: 1.4;}
+header > button {display: block;background: #fff;border: 1px solid #d5d5d5;padding: 12px 20px;border-radius: 5px;cursor: pointer;font-size: 16px;font-weight: bold;}
+header > button:hover {background: #fafafa;}
+
+main {width: calc(100% - 80px);padding: 0 40px;}
+main .item {display: flex;justify-content: space-between;align-items: center;border: 1px solid #d5d5d5;background: #fff;border-radius: 10px;padding: 20px 40px;margin-bottom: 12px;}
+main .item .left_box {width: calc(100% - 60px);}
+main .item .left_box input[type='checkbox'] {width: 24px;margin-right: 6px;}
+main .item .left_box input[type='text'] {width: calc(100% - 80px);font-size: 16px;line-height: 1.4;background: transparent;border: none;border-bottom: 1px solid #aaa;padding: 4px;}
+main .item .left_box input[type='text']:active,
+main .item .left_box input[type='text']:focus {outline: none;}
+main .item .left_box input[type='text']:disabled {font-size: 16px;line-height: 1.4;background: transparent;border: none;}
+main .item .actions {display: flex;flex-direction: column;width: 60px;}
+main .item .actions button {font-size: 14px;font-weight: bold;padding: 4px 8px;border-radius: 5px;background: #fff;transition: all .3s;cursor: pointer;}
+main .item .actions .edit-btn {border: 1px solid #0a4b0a;color: #0a4b0a;margin-bottom: 6px;}
+main .item .actions .edit-btn:hover {background: #0a4b0a;color: #fff;transition: all .3s;}
+main .item .actions .delete-btn {border: 1px solid #d30004;color: #d30004;}
+main .item .actions .delete-btn:hover {background: #d30004;color: #fff;transition: all .3s;}
+
+
+main .item.complete {background: #ddd;border: #ddd;}
+main .item.complete input[type='text'] {text-decoration: line-through;}
+
+main .non-todo {background: #fff;text-align: center;padding: 20px 0;border-radius: 5px;}
