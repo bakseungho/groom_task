@@ -1,0 +1,64 @@
+* {margin: 0;padding: 0;}
+a {text-decoration: none;}
+
+html, body {background: #2d2d2d;}
+
+:root {
+    --border: 1px solid #d5d5d5;
+}
+
+header {width: calc(100% - 48px);background: #222;padding: 12px 24px;}
+header h1 {color: #f1f1f1;font-weight: bold;}
+
+main {width: calc(100% - 48px);padding: 24px;margin-bottom: 48px;}
+main .search_wrap {border: var(--border);border-radius: 5px;padding: 24px;}
+main .search_wrap h2 {color: #fafafa;}
+main .search_wrap p {color: #ccc;margin-bottom: 12px;}
+main .search_wrap input {border: 1px solid #ccc;background: #444;width: calc(100% - 24px);height: 32px;border-radius: 3px;padding: 0 12px;font-size: 16px;color: #fff;font-weight: bold;}
+main .search_wrap input::placeholder {color: #aaa;}
+
+main #user_info_display {display: none;}
+main .user_wrap {margin: 24px 0 56px;}
+main .user_cont {display: flex;justify-content: center;}
+main #profile_img {display: block;width: 400px;border-radius: 50%;}
+main .user_cont .user_right {margin-left: 48px;}
+main .user_cont .user_right .user_state {display: flex;}
+main .user_cont .user_right .user_state p {padding: 6px 10px;color: #f1f1f1;margin-right: 6px;font-size: 14px;border-radius: 3px;}
+main .user_cont .user_right .user_state p:last-child {margin-right: 0;}
+main .user_cont .user_right .user_state p.repos {background: rgb(18, 18, 150);}
+main .user_cont .user_right .user_state p.gists {background: rgb(36, 36, 36);}
+main .user_cont .user_right .user_state p.followers {background: rgb(13, 141, 34);}
+main .user_cont .user_right .user_state p.following {background: rgb(155, 15, 85);}
+
+main .user_info_top {margin-top: 24px;margin-bottom: 24px;}
+main #usernaem {font-size: 32px;color: #fff;font-weight: bold;}
+main #git_id {font-size: 14px;color: #ccc;color: #aaa;cursor: pointer;}
+main #git_id:hover {text-decoration: underline;}
+main #wb a {color: #f0f;}
+main #wb a:hover {text-decoration: underline;}
+
+main .user_info_sub {display: flex;flex-direction: column;margin-bottom: 24px;}
+main .user_info_sub span {color: #ccc;margin-bottom: 6px;}
+
+main .repos_wrap {width: 100%;}
+main .repos_wrap h3 {color: #f1f1f1;margin-bottom: 12px;}
+main .repos_wrap .repos_cont .repo_item {display: flex;justify-content: space-between;align-items: center;width: calc(100% - 48px);padding: 12px 24px;background: #333;border: 1px solid #666;margin-bottom: 12px;border-radius: 10px;min-height: 54px;}
+main .repos_wrap .repos_cont .repo_item a {display: block;font-weight: bold;font-size: 20px;color: #ddd;}
+main .repos_wrap .repos_cont .repo_item a:hover {text-decoration: underline;}
+main .repos_wrap .repos_cont .repo_item .repo_info {display: flex;}
+main .repos_wrap .repos_cont .repo_item .repo_info p {padding: 6px 10px;color: #f1f1f1;margin-right: 6px;font-size: 14px;border-radius: 3px;}
+main .repos_wrap .repos_cont .repo_item .repo_info p.star {background: rgb(18, 18, 150);}
+main .repos_wrap .repos_cont .repo_item .repo_info p.watchers {background: rgb(36, 36, 36);}
+main .repos_wrap .repos_cont .repo_item .repo_info p.forks {background: rgb(13, 141, 34);}
+
+footer {width: 100%;text-align: center;color: #888;}
+
+
+
+@media screen and (max-width: 1024px) {
+    .user_wrap .user_cont {flex-direction: column;align-items: center;}
+    .user_wrap .user_cont .user_right {margin-top: 48px;margin-left: 0;}
+    .user_wrap .user_cont .user_right .user_state {justify-content: center;}
+
+    .grass_wrap img {width: 100%;}
+}

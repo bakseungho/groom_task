@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Finder</title>
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- //CSS Link -->
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Github Finder</h1>
+    </header>
+    <!-- //Header -->
+
+    <!-- Main -->
+    <main>
+        <!-- User Find -->
+        <div class="search_wrap">
+            <h2>Search Github User</h2>
+            <p>Enter a username to fetch a user profile and repos</p>
+            <input type="text" id="search" placeholder="유저명을 입력하고 Enter" />
+        </div>
+        <!-- //User Find -->
+
+        <!-- User Info -->
+        <div id="user_info_display">
+
+            <!-- User Profile -->
+            <div class="user_wrap">
+                <div class="user_cont">
+                    <img id="profile_img" src="hidden" />
+
+                    <div class="user_right">
+                        <div class="user_state">
+                            <p class="repos">Public Repos : <b id="repos"></b></p>
+                            <p class="gists">Public Gists : <b id="gists"></b></p>
+                            <p class="followers">Followers : <b id="followers"></b></p>
+                            <p class="following">Following : <b id="following"></b></p>
+                        </div>
+
+                        <div class="user_info">
+                            <div class="user_info_top">
+                                <p id="usernaem"></p>
+                                <a id="git_id" target="_blank"></a>
+                            </div>
+
+                            <div class="user_info_sub">
+                                <span class="company">회사 : <b id="cp"></b></span>
+                                <span class="website">웹사이트 : <b id="wb"></b></span>
+                                <span class="location">위치 : <b id="lo"></b></span>
+                                <span class="join">가입일 : <b id="jo"></b></span>
+                            </div>
+                        </div>
+
+                        <!-- 사용자 잔디 -->
+                        <div class="grass_wrap">
+                            <img src="hidden" alt="" id="grass_img">
+                        </div>
+                        <!-- 사용자 잔디 -->
+                    </div>
+                </div>
+            </div>
+            <!-- //User Profile -->
+
+            <!-- User Repos -->
+            <div class="repos_wrap">
+                <h3>Latest Repos : <b id="repo_count"></b></h3>
+
+                <div class="repos_cont">
+                    <div class="repos_item"></div>
+                </div>
+            </div>
+            <!-- //User Repos -->
+
+        </div>
+        <!-- //User Info -->
+    </main>
+    <!-- //Main -->
+
+    <!-- Footer -->
+    <footer>
+        Github Finder ©
+    </footer>
+    <!-- //Footer-->
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
