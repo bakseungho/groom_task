@@ -51,6 +51,10 @@ main .repos_wrap .repos_cont .repo_item .repo_info p.star {background: rgb(18, 1
 main .repos_wrap .repos_cont .repo_item .repo_info p.watchers {background: rgb(36, 36, 36);}
 main .repos_wrap .repos_cont .repo_item .repo_info p.forks {background: rgb(13, 141, 34);}
 
+main .msg {font-size: 18px;font-weight: bold;}
+main .msg.not {color: #aaa;}
+main .msg.err {color: rgb(241, 96, 96);}
+
 footer {width: 100%;text-align: center;color: #888;}
 
 

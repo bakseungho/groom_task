@@ -1,29 +1,30 @@
 const baseUrl = 'https://api.github.com/users'; // github user api
+const client_id = '950bf0e544a8afdcc982';
+const client_secrets = 'ba76a8f38cd0bef4442582fa3c556c6465279aaf';
 const showDisplay = document.querySelector('#user_info_display');
 const search = document.querySelector('#search');
 
 // user api
 const UserProfile = async (un) => {
     try {
-        const res = await fetch(`${baseUrl}/${un}`);
-        const user = await res.json();
+        const userRes = await fetch(`${baseUrl}/${un}?client_id=${client_id}&client_secrets=${client_secrets}`);
+        const user = await userRes.json();
 
-        ShowUserProfileInfo(user);
+        const reposRes = await fetch(`${baseUrl}/${un}/repos?client_id=${client_id}&client_secrets=${client_secrets}`);
+        const repos = await reposRes.json();
+
+        if(user.message === 'Not Found' && repos.message === 'Not Found') {
+            document.querySelector('.user_cont').innerHtml = '<p class="not msg">Not Found</p>';
+            document.querySelector('.repos_wrap').style.display = 'none';
+        }else {
+            ShowUserProfileInfo(user);
+            ShowUserRepos(repos);
+        }
     }
     catch(err) {
-        console.log(err);
-    }
-}
-
-// repo api
-const UserRepos = async (un) => {
-    try {
-        const res = await fetch(`${baseUrl}/${un}/repos`);
-        const user = await res.json();
-
-        ShowUserRepos(user);
-    }
-    catch(err) {
+        // showDisplay.style.display = 'none';
+        document.querySelector('.user_cont').innerHTML = '<p class="err msg">토큰만료로 인한 오류</p>';
+        document.querySelector('.repos_wrap').style.display = 'none';
         console.log(err);
     }
 }
@@ -85,12 +86,16 @@ const ShowUserRepos = (repos) => {
 
 // event
 search.addEventListener('keydown', e => {
-    const _val = search.value;
+    const inputValue = e.target.value;
 
     if(e.keyCode == 13) {
-        showDisplay.style.display = 'block';
-        UserProfile(_val);
-        UserRepos(_val);
+        if(inputValue) {
+            showDisplay.style.display = 'block';
+
+            UserProfile(inputValue);
+        }else {
+            alert('User명을 입력하세요!');
+        }
     }
 });
 
