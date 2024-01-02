@@ -45,3 +45,18 @@ HTML, CSS를 이용해서 넷플릭스 사이트 만들기
     3. 위에 기능 외에 잔디밭 기능, Spinner 기능 등 원하는 기능을 추가
 
 
+## 04_Spread Sheet 앱 만들기
+
+- 목표
+자바스크립트를 이용해서 Spread Sheet 앱 만들기
+<br>
+- 수행기간
+6일
+<br>
+- 하위과제<br>
+    1. 현재 focus 된 셀의 위쪽 헤더 왼쪽 헤더가 함께 하늘색으로 하이라이트 표시
+    2. 작성된 모든 데이터들을 Export SpreadSheet 버튼을 눌러서 Excel 파일로 생성
+    3. 생성된 Excel 파일을 구글 SpreadSheet에서 Import 하면 같은 데이터가 나오게 한다.
+
+
+

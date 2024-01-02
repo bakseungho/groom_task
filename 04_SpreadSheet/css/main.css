@@ -1,0 +1,26 @@
+* {margin: 0;padding: 0;}
+
+html, body {height: 100%;background: #eee;overflow-x: auto;}
+
+:root {
+    --primary: #200e97;
+    --secondary: #5a45e2;
+    --sub: #e6e3ff;
+}
+
+header {width: 100%;background: #fff;}
+header .header_top {display: flex;justify-content: space-between;align-items: center;padding: 18px 24px;}
+header .header_top h2 {font-size: 28px;}
+header .header_top #export-btn {background: var(--primary);border-radius: 5px;color: #fff;border: none;padding: 10px 14px;margin-bottom: 10px;}
+header .header_bottom {display: flex;align-items: center;border-top: 1px solid #d5d5d5;border-bottom: 2px solid #ccc;}
+header .select_cell {width: 80px;padding: 8px 24px;background: #fafafa;border-right: 1px solid #d5d5d5;}
+header .select_cell #cell-status {font-weight: bold;color: var(--primary);}
+header .select_value {padding: 8px 12px;font-size: 14px;}
+
+main {height: calc(100% - 120.5px);padding: 0 0;overflow-y: auto;}
+
+.cell-row {display: flex;}
+.cell {width: 80px;padding: 0 6px;border: 1px solid #ddd;height: 40px;outline: none;box-sizing: border-box;}
+.cell.on {border: 2px solid var(--primary);background: var(--sub);color: var(--primary);font-weight: bold;}
+.cell.header {text-align: center;background: #f1f1f1;}
+.cell.header.active {background: var(--secondary);color: #fff;}
