@@ -1,7 +1,7 @@
 import React from 'react'
 import List from './List';
 
-const Lists = React.memo(({ budgetData, setBudgetData, handleClick }) => {
+const Lists = React.memo(({ budgetData, setBudgetData, handleClick, setCalc }) => {
 
     
     return (
@@ -10,11 +10,13 @@ const Lists = React.memo(({ budgetData, setBudgetData, handleClick }) => {
             budgetData.map(data => (
                 <List 
                     key={data.id}
+                    id={data.id}
                     item={data.item}
                     price={data.price}
                     budgetData={budgetData}
                     setBudgetData={setBudgetData}
                     handleClick={handleClick}
+                    setCalc={setCalc}
                 />
             ))
         }

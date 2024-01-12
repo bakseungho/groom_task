@@ -18,7 +18,7 @@ function App() {
     setBudgetData(newTodoData);
   }, [budgetData]);
 
-  const handleSubmit = (e, id) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     
     const newData = {
@@ -40,8 +40,7 @@ function App() {
 
       <div className='inner-box w-full p-5 my-4 bg-white rounded shadow-md lg:w-4/5 lg:max-w-lg'>
         <Form handleSubmit={handleSubmit} value={value} setValue={setValue} priceValue={priceValue} setPriceValue={setPriceValue} />
-
-        <Lists budgetData={budgetData} setBudgetData={setBudgetData} handleClick={handleClick} />
+        <Lists budgetData={budgetData} setBudgetData={setBudgetData} handleClick={handleClick} setCalc={setCalc} />
 
         {/*
         <form onSubmit={handleSubmit(onSubmit)} className="w-full px-[2rem]">

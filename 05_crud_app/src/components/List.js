@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const List = React.memo(({
-    id, item, price, budgetData, setBudgetData, handleClick
+    id, item, price, budgetData, setBudgetData, setCalc
 }) => {
 
     const [isEditing, setIsEditing] = useState(false);
@@ -19,26 +19,29 @@ const List = React.memo(({
     // List Item 삭제
     const handlerDeleteClick = itemId => {
         const newTodoItem = budgetData.filter(data => data.id !== itemId);
+
         setBudgetData(newTodoItem);
+
+        const total = newTodoItem.reduce((acc, {price}) => { return acc + price }, 0);
+        setCalc(total.toLocaleString('ko-KR'));
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = e => {
         e.preventDefault();
 
         const newTodoData = budgetData.map(data => {
             if(data.id === id) {
                 data.item = editeItem;
-                data.price = editePrice;
+                data.price = Number(editePrice);
             };
             return data;
         });
 
+        const total = newTodoData.reduce((acc, {price}) => { return acc + price }, 0);
+
         setBudgetData(newTodoData);
-
-
-        console.log('3 : ', budgetData);
-
         setIsEditing(false);
+        setCalc(total.toLocaleString('ko-KR'));
     }
 
     if(isEditing) {
@@ -55,7 +58,7 @@ const List = React.memo(({
                     </div>
 
                     <div className='flex justify-center items-center item-btn w-2/6'>
-                        <button type='submit' className='mr-2 text-sm p-1 text-white font-bold bg-green-700 rounded' onClick={() => handleClick(id)}>수정</button>
+                        <button type='submit' className='mr-2 text-sm p-1 text-white font-bold bg-green-700 rounded'>수정</button>
                         <button type='button' className='text-sm p-1 text-white font-bold bg-red-700 rounded' onClick={() => handlerDeleteClick(id)}>Delete</button>
                     </div>
                 </div>
