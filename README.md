@@ -1,8 +1,10 @@
 # groom_task
 구름 실습 과제 제출용 레포 입니다.
-> 01_Netflix
-> 02_Todo
-> 03_Github_Finder
+> 01_Netflix<br>
+> 02_Todo<br>
+> 03_Github_Finder<br>
+> 04_Spread_Sheet<br>
+> 05_CRUD_APP<br>
 > ( 향후 업데이트 )
 
 ## 01_Netflix
@@ -59,4 +61,16 @@ HTML, CSS를 이용해서 넷플릭스 사이트 만들기
     3. 생성된 Excel 파일을 구글 SpreadSheet에서 Import 하면 같은 데이터가 나오게 한다.
 
 
+
+## 05_CRUD 앱 만들기
+
+- 목표
+리액트를 이용해서 CRUD 앱 만들기
+<br>
+- 수행기간
+3일
+<br>
+- 하위과제<br>
+    1. 최대한 컴포넌트를 나눠서 구현하기
+    2. 폴더 이름 및 변수 이름을 명확하게 작성하기
 
